@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-04-07T12:54:24.292820" rpa="false" schemaversion="5">
+<suite id="s1" name="Preenchimento Incorreto" source="c:\Projeto-Robot\preenchimento_incorreto.robot">
+<test id="s1-t1" name="Verificar se ao preencher corretamente o formulário os dados são inseridos corretamente na lista e se um novo card é criado no time esperado" line="12">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-07T12:54:24.590380" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<msg time="2025-04-07T12:54:33.900865" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-07T12:54:33.901449" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=134.0.6998.179)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E1954C25+3179557]
+	(No symbol) [0x00007FF7E15B88A0]
+	(No symbol) [0x00007FF7E14491CA]
+	(No symbol) [0x00007FF7E1445B57]
+	(No symbol) [0x00007FF7E14368E9]
+	(No symbol) [0x00007FF7E1438658]
+	(No symbol) [0x00007FF7E1436BF6]
+	(No symbol) [0x00007FF7E1436676]
+	(No symbol) [0x00007FF7E143633A]
+	(No symbol) [0x00007FF7E1433EC2]
+	(No symbol) [0x00007FF7E14347AC]
+	(No symbol) [0x00007FF7E144D01A]
+	(No symbol) [0x00007FF7E14F11AE]
+	(No symbol) [0x00007FF7E14C7C2A]
+	(No symbol) [0x00007FF7E14F02F3]
+	(No symbol) [0x00007FF7E14C7A03]
+	(No symbol) [0x00007FF7E14906D0]
+	(No symbol) [0x00007FF7E1491983]
+	GetHandleVerifier [0x00007FF7E19B67CD+3579853]
+	GetHandleVerifier [0x00007FF7E19CD1D2+3672530]
+	GetHandleVerifier [0x00007FF7E19C2153+3627347]
+	GetHandleVerifier [0x00007FF7E172092A+868650]
+	(No symbol) [0x00007FF7E15C2FFF]
+	(No symbol) [0x00007FF7E15BF4A4]
+	(No symbol) [0x00007FF7E15BF646]
+	(No symbol) [0x00007FF7E15AEAA9]
+	BaseThreadInitThunk [0x00007FF9A706E8D7+23]
+	RtlUserThreadStart [0x00007FF9A7F5BF6C+44]
+</msg>
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-04-07T12:54:24.590037" elapsed="9.412265">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=134.0.6998.179)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E1954C25+3179557]
+	(No symbol) [0x00007FF7E15B88A0]
+	(No symbol) [0x00007FF7E14491CA]
+	(No symbol) [0x00007FF7E1445B57]
+	(No symbol) [0x00007FF7E14368E9]
+	(No symbol) [0x00007FF7E1438658]
+	(No symbol) [0x00007FF7E1436BF6]
+	(No symbol) [0x00007FF7E1436676]
+	(No symbol) [0x00007FF7E143633A]
+	(No symbol) [0x00007FF7E1433EC2]
+	(No symbol) [0x00007FF7E14347AC]
+	(No symbol) [0x00007FF7E144D01A]
+	(No symbol) [0x00007FF7E14F11AE]
+	(No symbol) [0x00007FF7E14C7C2A]
+	(No symbol) [0x00007FF7E14F02F3]
+	(No symbol) [0x00007FF7E14C7A03]
+	(No symbol) [0x00007FF7E14906D0]
+	(No symbol) [0x00007FF7E1491983]
+	GetHandleVerifier [0x00007FF7E19B67CD+3579853]
+	GetHandleVerifier [0x00007FF7E19CD1D2+3672530]
+	GetHandleVerifier [0x00007FF7E19C2153+3627347]
+	GetHandleVerifier [0x00007FF7E172092A+868650]
+	(No symbol) [0x00007FF7E15C2FFF]
+	(No symbol) [0x00007FF7E15BF4A4]
+	(No symbol) [0x00007FF7E15BF646]
+	(No symbol) [0x00007FF7E15AEAA9]
+	BaseThreadInitThunk [0x00007FF9A706E8D7+23]
+	RtlUserThreadStart [0x00007FF9A7F5BF6C+44]
+</status>
+</kw>
+<status status="FAIL" start="2025-04-07T12:54:24.588605" elapsed="9.414778">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=134.0.6998.179)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E1954C25+3179557]
+	(No symbol) [0x00007FF7E15B88A0]
+	(No symbol) [0x00007FF7E14491CA]
+	(No symbol) [0x00007FF7E1445B57]
+	(No symbol) [0x00007FF7E14368E9]
+	(No symbol) [0x00007FF7E1438658]
+	(No symbol) [0x00007FF7E1436BF6]
+	(No symbol) [0x00007FF7E1436676]
+	(No symbol) [0x00007FF7E143633A]
+	(No symbol) [0x00007FF7E1433EC2]
+	(No symbol) [0x00007FF7E14347AC]
+	(No symbol) [0x00007FF7E144D01A]
+	(No symbol) [0x00007FF7E14F11AE]
+	(No symbol) [0x00007FF7E14C7C2A]
+	(No symbol) [0x00007FF7E14F02F3]
+	(No symbol) [0x00007FF7E14C7A03]
+	(No symbol) [0x00007FF7E14906D0]
+	(No symbol) [0x00007FF7E1491983]
+	GetHandleVerifier [0x00007FF7E19B67CD+3579853]
+	GetHandleVerifier [0x00007FF7E19CD1D2+3672530]
+	GetHandleVerifier [0x00007FF7E19C2153+3627347]
+	GetHandleVerifier [0x00007FF7E172092A+868650]
+	(No symbol) [0x00007FF7E15C2FFF]
+	(No symbol) [0x00007FF7E15BF4A4]
+	(No symbol) [0x00007FF7E15BF646]
+	(No symbol) [0x00007FF7E15AEAA9]
+	BaseThreadInitThunk [0x00007FF9A706E8D7+23]
+	RtlUserThreadStart [0x00007FF9A7F5BF6C+44]
+</status>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-07T12:54:34.006023" elapsed="2.295465"/>
+</kw>
+<status status="PASS" start="2025-04-07T12:54:34.004842" elapsed="2.297021"/>
+</kw>
+<status status="FAIL" start="2025-04-07T12:54:24.587432" elapsed="11.715033">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=134.0.6998.179)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E1954C25+3179557]
+	(No symbol) [0x00007FF7E15B88A0]
+	(No symbol) [0x00007FF7E14491CA]
+	(No symbol) [0x00007FF7E1445B57]
+	(No symbol) [0x00007FF7E14368E9]
+	(No symbol) [0x00007FF7E1438658]
+	(No symbol) [0x00007FF7E1436BF6]
+	(No symbol) [0x00007FF7E1436676]
+	(No symbol) [0x00007FF7E143633A]
+	(No symbol) [0x00007FF7E1433EC2]
+	(No symbol) [0x00007FF7E14347AC]
+	(No symbol) [0x00007FF7E144D01A]
+	(No symbol) [0x00007FF7E14F11AE]
+	(No symbol) [0x00007FF7E14C7C2A]
+	(No symbol) [0x00007FF7E14F02F3]
+	(No symbol) [0x00007FF7E14C7A03]
+	(No symbol) [0x00007FF7E14906D0]
+	(No symbol) [0x00007FF7E1491983]
+	GetHandleVerifier [0x00007FF7E19B67CD+3579853]
+	GetHandleVerifier [0x00007FF7E19CD1D2+3672530]
+	GetHandleVerifier [0x00007FF7E19C2153+3627347]
+	GetHandleVerifier [0x00007FF7E172092A+868650]
+	(No symbol) [0x00007FF7E15C2FFF]
+	(No symbol) [0x00007FF7E15BF4A4]
+	(No symbol) [0x00007FF7E15BF646]
+	(No symbol) [0x00007FF7E15AEAA9]
+	BaseThreadInitThunk [0x00007FF9A706E8D7+23]
+	RtlUserThreadStart [0x00007FF9A7F5BF6C+44]
+</status>
+</test>
+<status status="FAIL" start="2025-04-07T12:54:24.300267" elapsed="12.005439"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Preenchimento Incorreto" id="s1" pass="0" fail="1" skip="0">Preenchimento Incorreto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
