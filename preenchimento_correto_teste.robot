@@ -1,70 +1,68 @@
 *** Settings ***
-Library         SeleniumLibrary
-Library         FakerLibrary    locale=pt_BR
-Library         Collections
-Library         BuiltIn
-Library         OperatingSystem
-Library         String
-Library         Process
-Library         Dialogs
-Library         DateTime
-Library         Collections
-Library         BuiltIn
-Library         FakerLibrary    locale=pt_BR
-Library         String
-Library         OperatingSystem
-Library         random
-Resource        setup_teardown.robot
-Test Setup      Dado que eu acesse o Organo
-Test Teardown   Fechar o navegador
+Library          SeleniumLibrary
+Library          FakerLibrary    locale=pt_BR
+Resource         setup_teardown.robot
+Test Setup       Dado que eu acesse o Organo
+Test Teardown    Fechar o navegador
 
 *** Variables ***
 ${CAMPO_NOME}      id:form-nome
 ${CAMPO_CARGO}     id:form-cargo
 ${CAMPO_IMAGEM}    id:form-imagem
 ${CAMPO_TIME}      class:lista-suspensa
-${CAMPO_CARD}      id:form-botao 
-${PROGRAMACAO}     //option[contains(.,'Programação')]
-${FRONT-END}       //option[contains(.,'Front-End')]
-${DADOS}           //option[contains(.,'Data Science')]
-${DEVOPS}          //option[contains(.,'Devops')]
-${UX}              //option[contains(.,'UX e Design')]
-${MOBILE}          //option[contains(.,'Mobile')]
-${INOVACAO}        //option[contains(.,'Inovação')]
+${BOTAO_CARD}      id:form-botao 
+
+@{selecionar_time}
+...       //option[contains(.,'Programação')]
+...       //option[contains(.,'Front-End')]
+...       //option[contains(.,'Data Science')]
+...       //option[contains(.,'Devops')]
+...       //option[contains(.,'UX e Design')]
+...       //option[contains(.,'Mobile')]
+...       //option[contains(.,'Inovação')]
 
 *** Test Cases ***
+Verificar se ao preencher corretamente o formulário os dados são inseridos corretamente na lista e se um novo card é criado no time escolhido  
+     Dado que eu preencha os campos do formulário
+     E clique no botão "Criar Card"
+     Então identificar o card no time esperado
 
-Verificar se ao preencher corretamente o formulário os dados são inseridos corretamente na lista e se um novo card é criado no time esperado
+Verificar se é possivel criar mais de um card se preenchermos os campos corretamente
     Dado que eu preencha os campos do formulário
-    E clique no botão criar card
-    Então identificar o card no time esperado
+    E clique no botão "Criar Card"
+    Então identificar 3 cards no time esperado
 
-Verificar se é possivel criar mais de um card e se preenchermos os campos corretamente
+Verificar se é possível criar um card para cada time se preenchermos os campos corretamente
     Dado que eu preencha os campos do formulário
-    E clique no botão criar card
-    Então identificar 3 cards no time espera
+    Então criar card e identificar 1 card em cada time disponível
 
 *** Keywords ***
 Dado que eu preencha os campos do formulário
-    ${Nome}=        FakerLibrary.First Name
-    Input Text      ${CAMPO_NOME}      ${Nome}
-    ${Cargo}=       FakerLibrary.Job
-    Input Text      ${CAMPO_CARGO}     ${Cargo}
-    ${rand}=        Evaluate    random.randint(1, 1000)    modules=random
-    ${Imagem}=      Set Variable    https://picsum.photos/200/300?random=${rand}
-    Input Text      ${CAMPO_IMAGEM}   ${Imagem}
-    Click Element   ${CAMPO_TIME}
-    Click Element   ${PROGRAMACAO}
+    ${Nome}          FakerLibrary.First Name
+    Input Text       ${CAMPO_NOME}       ${Nome}
+    ${Cargo}         FakerLibrary.Job    
+    Input Text       ${CAMPO_CARGO}      ${Cargo} 
+    ${Imagem}        FakerLibrary.Image Url    
+    Input Text       ${CAMPO_IMAGEM}     ${Imagem}
+    Click Element    ${CAMPO_TIME}
+    Click Element    ${selecionar_time}[0]
 
-E clique no botão criar card    
-    Click Element    ${CAMPO_CARD}
+E clique no botão "Criar Card"    
+    Click Element    ${BOTAO_CARD}
 
 Então identificar o card no time esperado
     Element Should Be Visible    class:colaborador
 
-Então identificar 3 cards no time espera
-    FOR    ${i}    IN RANGE    1    3
+Então identificar 3 cards no time esperado
+    FOR    ${i}    IN RANGE    1     3       
         Dado que eu preencha os campos do formulário
-        E clique no botão criar card  
+        E clique no botão "Criar Card"
     END
-    Sleep    10s
+
+Então criar card e identificar 1 card em cada time disponível
+    FOR    ${indice}    ${time}    IN ENUMERATE    @{selecionar_time}
+        Dado que eu preencha os campos do formulário
+        Click Element    ${time}
+        E clique no botão "Criar Card"
+
+    END
