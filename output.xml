@@ -1,163 +1,368 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-04-07T12:54:24.292820" rpa="false" schemaversion="5">
-<suite id="s1" name="Preenchimento Incorreto" source="c:\Projeto-Robot\preenchimento_incorreto.robot">
-<test id="s1-t1" name="Verificar se ao preencher corretamente o formulário os dados são inseridos corretamente na lista e se um novo card é criado no time esperado" line="12">
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-12T18:18:09.730346" rpa="false" schemaversion="5">
+<suite id="s1" name="Preenchimento Correto Teste" source="C:\Projeto-Robot\preenchimento_correto_teste.robot">
+<test id="s1-t1" name="Verificar se ao preencher corretamente o formulário os dados são inseridos corretamente na lista e se um novo card é criado no time esperado" line="37">
 <kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-07T12:54:24.590380" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
-<msg time="2025-04-07T12:54:33.900865" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-04-07T12:54:33.901449" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=134.0.6998.179)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7E1954C25+3179557]
-	(No symbol) [0x00007FF7E15B88A0]
-	(No symbol) [0x00007FF7E14491CA]
-	(No symbol) [0x00007FF7E1445B57]
-	(No symbol) [0x00007FF7E14368E9]
-	(No symbol) [0x00007FF7E1438658]
-	(No symbol) [0x00007FF7E1436BF6]
-	(No symbol) [0x00007FF7E1436676]
-	(No symbol) [0x00007FF7E143633A]
-	(No symbol) [0x00007FF7E1433EC2]
-	(No symbol) [0x00007FF7E14347AC]
-	(No symbol) [0x00007FF7E144D01A]
-	(No symbol) [0x00007FF7E14F11AE]
-	(No symbol) [0x00007FF7E14C7C2A]
-	(No symbol) [0x00007FF7E14F02F3]
-	(No symbol) [0x00007FF7E14C7A03]
-	(No symbol) [0x00007FF7E14906D0]
-	(No symbol) [0x00007FF7E1491983]
-	GetHandleVerifier [0x00007FF7E19B67CD+3579853]
-	GetHandleVerifier [0x00007FF7E19CD1D2+3672530]
-	GetHandleVerifier [0x00007FF7E19C2153+3627347]
-	GetHandleVerifier [0x00007FF7E172092A+868650]
-	(No symbol) [0x00007FF7E15C2FFF]
-	(No symbol) [0x00007FF7E15BF4A4]
-	(No symbol) [0x00007FF7E15BF646]
-	(No symbol) [0x00007FF7E15AEAA9]
-	BaseThreadInitThunk [0x00007FF9A706E8D7+23]
-	RtlUserThreadStart [0x00007FF9A7F5BF6C+44]
-</msg>
+<msg time="2025-04-12T18:18:10.399184" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
 <arg>url=http://localhost:3000/</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2025-04-07T12:54:24.590037" elapsed="9.412265">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=134.0.6998.179)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7E1954C25+3179557]
-	(No symbol) [0x00007FF7E15B88A0]
-	(No symbol) [0x00007FF7E14491CA]
-	(No symbol) [0x00007FF7E1445B57]
-	(No symbol) [0x00007FF7E14368E9]
-	(No symbol) [0x00007FF7E1438658]
-	(No symbol) [0x00007FF7E1436BF6]
-	(No symbol) [0x00007FF7E1436676]
-	(No symbol) [0x00007FF7E143633A]
-	(No symbol) [0x00007FF7E1433EC2]
-	(No symbol) [0x00007FF7E14347AC]
-	(No symbol) [0x00007FF7E144D01A]
-	(No symbol) [0x00007FF7E14F11AE]
-	(No symbol) [0x00007FF7E14C7C2A]
-	(No symbol) [0x00007FF7E14F02F3]
-	(No symbol) [0x00007FF7E14C7A03]
-	(No symbol) [0x00007FF7E14906D0]
-	(No symbol) [0x00007FF7E1491983]
-	GetHandleVerifier [0x00007FF7E19B67CD+3579853]
-	GetHandleVerifier [0x00007FF7E19CD1D2+3672530]
-	GetHandleVerifier [0x00007FF7E19C2153+3627347]
-	GetHandleVerifier [0x00007FF7E172092A+868650]
-	(No symbol) [0x00007FF7E15C2FFF]
-	(No symbol) [0x00007FF7E15BF4A4]
-	(No symbol) [0x00007FF7E15BF646]
-	(No symbol) [0x00007FF7E15AEAA9]
-	BaseThreadInitThunk [0x00007FF9A706E8D7+23]
-	RtlUserThreadStart [0x00007FF9A7F5BF6C+44]
-</status>
+<status status="PASS" start="2025-04-12T18:18:10.398987" elapsed="2.846329"/>
 </kw>
-<status status="FAIL" start="2025-04-07T12:54:24.588605" elapsed="9.414778">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=134.0.6998.179)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7E1954C25+3179557]
-	(No symbol) [0x00007FF7E15B88A0]
-	(No symbol) [0x00007FF7E14491CA]
-	(No symbol) [0x00007FF7E1445B57]
-	(No symbol) [0x00007FF7E14368E9]
-	(No symbol) [0x00007FF7E1438658]
-	(No symbol) [0x00007FF7E1436BF6]
-	(No symbol) [0x00007FF7E1436676]
-	(No symbol) [0x00007FF7E143633A]
-	(No symbol) [0x00007FF7E1433EC2]
-	(No symbol) [0x00007FF7E14347AC]
-	(No symbol) [0x00007FF7E144D01A]
-	(No symbol) [0x00007FF7E14F11AE]
-	(No symbol) [0x00007FF7E14C7C2A]
-	(No symbol) [0x00007FF7E14F02F3]
-	(No symbol) [0x00007FF7E14C7A03]
-	(No symbol) [0x00007FF7E14906D0]
-	(No symbol) [0x00007FF7E1491983]
-	GetHandleVerifier [0x00007FF7E19B67CD+3579853]
-	GetHandleVerifier [0x00007FF7E19CD1D2+3672530]
-	GetHandleVerifier [0x00007FF7E19C2153+3627347]
-	GetHandleVerifier [0x00007FF7E172092A+868650]
-	(No symbol) [0x00007FF7E15C2FFF]
-	(No symbol) [0x00007FF7E15BF4A4]
-	(No symbol) [0x00007FF7E15BF646]
-	(No symbol) [0x00007FF7E15AEAA9]
-	BaseThreadInitThunk [0x00007FF9A706E8D7+23]
-	RtlUserThreadStart [0x00007FF9A7F5BF6C+44]
-</status>
+<status status="PASS" start="2025-04-12T18:18:10.397565" elapsed="2.848060"/>
+</kw>
+<kw name="Dado que eu preencha os campos do formulário">
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2025-04-12T18:18:13.247186" level="INFO">${Nome} = Caroline</msg>
+<var>${Nome}</var>
+<status status="PASS" start="2025-04-12T18:18:13.246848" elapsed="0.000400"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:13.248429" level="INFO">Typing text 'Caroline' into text field 'id:form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:13.247609" elapsed="0.155991"/>
+</kw>
+<kw name="Job" owner="FakerLibrary">
+<msg time="2025-04-12T18:18:13.405328" level="INFO">${Cargo} = Babá</msg>
+<var>${Cargo}</var>
+<status status="PASS" start="2025-04-12T18:18:13.404686" elapsed="0.000722"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:13.406303" level="INFO">Typing text 'Babá' into text field 'id:form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${Cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:13.405740" elapsed="0.114569"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T18:18:13.520947" level="INFO">${rand} = 339</msg>
+<var>${rand}</var>
+<arg>random.randint(1, 1000)</arg>
+<arg>modules=random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T18:18:13.520658" elapsed="0.000330"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-12T18:18:13.521384" level="INFO">${Imagem} = https://picsum.photos/200/300?random=339</msg>
+<var>${Imagem}</var>
+<arg>https://picsum.photos/200/300?random=${rand}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-12T18:18:13.521171" elapsed="0.000241"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:13.521751" level="INFO">Typing text 'https://picsum.photos/200/300?random=339' into text field 'id:form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${Imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:13.521542" elapsed="0.112658"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:13.634782" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:13.634525" elapsed="0.062881"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:13.697784" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<arg>${PROGRAMACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:13.697584" elapsed="0.034259"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:13.246299" elapsed="0.485672"/>
+</kw>
+<kw name="E clique no botão criar card">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:13.733400" level="INFO">Clicking element 'id:form-botao'.</msg>
+<arg>${CAMPO_CARD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:13.733027" elapsed="0.080249"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:13.732394" elapsed="0.080992"/>
+</kw>
+<kw name="Então identificar o card no time esperado">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:13.840900" level="INFO">Element 'class:colaborador' is displayed.</msg>
+<arg>class:colaborador</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-12T18:18:13.814126" elapsed="0.026869"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:13.813707" elapsed="0.027380"/>
 </kw>
 <kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-07T12:54:34.006023" elapsed="2.295465"/>
+<status status="PASS" start="2025-04-12T18:18:13.841880" elapsed="2.234511"/>
 </kw>
-<status status="PASS" start="2025-04-07T12:54:34.004842" elapsed="2.297021"/>
+<status status="PASS" start="2025-04-12T18:18:13.841568" elapsed="2.235197"/>
 </kw>
-<status status="FAIL" start="2025-04-07T12:54:24.587432" elapsed="11.715033">Setup failed:
-WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=134.0.6998.179)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7E1954C25+3179557]
-	(No symbol) [0x00007FF7E15B88A0]
-	(No symbol) [0x00007FF7E14491CA]
-	(No symbol) [0x00007FF7E1445B57]
-	(No symbol) [0x00007FF7E14368E9]
-	(No symbol) [0x00007FF7E1438658]
-	(No symbol) [0x00007FF7E1436BF6]
-	(No symbol) [0x00007FF7E1436676]
-	(No symbol) [0x00007FF7E143633A]
-	(No symbol) [0x00007FF7E1433EC2]
-	(No symbol) [0x00007FF7E14347AC]
-	(No symbol) [0x00007FF7E144D01A]
-	(No symbol) [0x00007FF7E14F11AE]
-	(No symbol) [0x00007FF7E14C7C2A]
-	(No symbol) [0x00007FF7E14F02F3]
-	(No symbol) [0x00007FF7E14C7A03]
-	(No symbol) [0x00007FF7E14906D0]
-	(No symbol) [0x00007FF7E1491983]
-	GetHandleVerifier [0x00007FF7E19B67CD+3579853]
-	GetHandleVerifier [0x00007FF7E19CD1D2+3672530]
-	GetHandleVerifier [0x00007FF7E19C2153+3627347]
-	GetHandleVerifier [0x00007FF7E172092A+868650]
-	(No symbol) [0x00007FF7E15C2FFF]
-	(No symbol) [0x00007FF7E15BF4A4]
-	(No symbol) [0x00007FF7E15BF646]
-	(No symbol) [0x00007FF7E15AEAA9]
-	BaseThreadInitThunk [0x00007FF9A706E8D7+23]
-	RtlUserThreadStart [0x00007FF9A7F5BF6C+44]
-</status>
+<status status="PASS" start="2025-04-12T18:18:10.396757" elapsed="5.680736"/>
 </test>
-<status status="FAIL" start="2025-04-07T12:54:24.300267" elapsed="12.005439"/>
+<test id="s1-t2" name="Verificar se é possivel criar mais de um card e se preenchermos os campos corretamente" line="42">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:16.083353" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-12T18:18:16.082689" elapsed="2.914767"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:16.081715" elapsed="2.915995"/>
+</kw>
+<kw name="Dado que eu preencha os campos do formulário">
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2025-04-12T18:18:18.998960" level="INFO">${Nome} = Rafael</msg>
+<var>${Nome}</var>
+<status status="PASS" start="2025-04-12T18:18:18.998694" elapsed="0.000318"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:18.999495" level="INFO">Typing text 'Rafael' into text field 'id:form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:18.999229" elapsed="0.116242"/>
+</kw>
+<kw name="Job" owner="FakerLibrary">
+<msg time="2025-04-12T18:18:19.115930" level="INFO">${Cargo} = Preparador de máquinas</msg>
+<var>${Cargo}</var>
+<status status="PASS" start="2025-04-12T18:18:19.115689" elapsed="0.000273"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.116282" level="INFO">Typing text 'Preparador de máquinas' into text field 'id:form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${Cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.116085" elapsed="0.100593"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T18:18:19.218374" level="INFO">${rand} = 263</msg>
+<var>${rand}</var>
+<arg>random.randint(1, 1000)</arg>
+<arg>modules=random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.217109" elapsed="0.001363"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-12T18:18:19.219334" level="INFO">${Imagem} = https://picsum.photos/200/300?random=263</msg>
+<var>${Imagem}</var>
+<arg>https://picsum.photos/200/300?random=${rand}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.218839" elapsed="0.000600"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.220630" level="INFO">Typing text 'https://picsum.photos/200/300?random=263' into text field 'id:form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${Imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.220402" elapsed="0.105517"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.326305" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.326105" elapsed="0.062606"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.389066" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<arg>${PROGRAMACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.388881" elapsed="0.037332"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:18.998281" elapsed="0.428048"/>
+</kw>
+<kw name="E clique no botão criar card">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.428019" level="INFO">Clicking element 'id:form-botao'.</msg>
+<arg>${CAMPO_CARD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.427763" elapsed="0.076115"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:19.426761" elapsed="0.077300"/>
+</kw>
+<kw name="Então identificar 3 cards no time espera">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Dado que eu preencha os campos do formulário">
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2025-04-12T18:18:19.506645" level="INFO">${Nome} = Arthur</msg>
+<var>${Nome}</var>
+<status status="PASS" start="2025-04-12T18:18:19.506508" elapsed="0.000164"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.506957" level="INFO">Typing text 'Arthur' into text field 'id:form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.506786" elapsed="0.081956"/>
+</kw>
+<kw name="Job" owner="FakerLibrary">
+<msg time="2025-04-12T18:18:19.589159" level="INFO">${Cargo} = Intérprete de Bíblias</msg>
+<var>${Cargo}</var>
+<status status="PASS" start="2025-04-12T18:18:19.588922" elapsed="0.000269"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.589522" level="INFO">Typing text 'Intérprete de Bíblias' into text field 'id:form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${Cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.589324" elapsed="0.092536"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T18:18:19.682487" level="INFO">${rand} = 461</msg>
+<var>${rand}</var>
+<arg>random.randint(1, 1000)</arg>
+<arg>modules=random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.682129" elapsed="0.000424"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-12T18:18:19.683124" level="INFO">${Imagem} = https://picsum.photos/200/300?random=461</msg>
+<var>${Imagem}</var>
+<arg>https://picsum.photos/200/300?random=${rand}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.682781" elapsed="0.000401"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.684222" level="INFO">Typing text 'https://picsum.photos/200/300?random=461' into text field 'id:form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${Imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.683432" elapsed="0.113743"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.797821" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.797495" elapsed="0.061113"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.860029" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<arg>${PROGRAMACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.859569" elapsed="0.025874"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:19.506302" elapsed="0.379283"/>
+</kw>
+<kw name="E clique no botão criar card">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.886932" level="INFO">Clicking element 'id:form-botao'.</msg>
+<arg>${CAMPO_CARD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.886239" elapsed="0.053997"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:19.885751" elapsed="0.054585"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-12T18:18:19.506136" elapsed="0.434235"/>
+</iter>
+<iter>
+<kw name="Dado que eu preencha os campos do formulário">
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2025-04-12T18:18:19.941165" level="INFO">${Nome} = Luiz Fernando</msg>
+<var>${Nome}</var>
+<status status="PASS" start="2025-04-12T18:18:19.940992" elapsed="0.000215"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:19.941574" level="INFO">Typing text 'Luiz Fernando' into text field 'id:form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${Nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:19.941354" elapsed="0.073330"/>
+</kw>
+<kw name="Job" owner="FakerLibrary">
+<msg time="2025-04-12T18:18:20.015368" level="INFO">${Cargo} = Promotor público/de justiça</msg>
+<var>${Cargo}</var>
+<status status="PASS" start="2025-04-12T18:18:20.014975" elapsed="0.000577"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:20.016034" level="INFO">Typing text 'Promotor público/de justiça' into text field 'id:form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${Cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:20.015783" elapsed="0.094396"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T18:18:20.110731" level="INFO">${rand} = 322</msg>
+<var>${rand}</var>
+<arg>random.randint(1, 1000)</arg>
+<arg>modules=random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T18:18:20.110382" elapsed="0.000384"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-12T18:18:20.111115" level="INFO">${Imagem} = https://picsum.photos/200/300?random=322</msg>
+<var>${Imagem}</var>
+<arg>https://picsum.photos/200/300?random=${rand}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-12T18:18:20.110907" elapsed="0.000238"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:20.111586" level="INFO">Typing text 'https://picsum.photos/200/300?random=322' into text field 'id:form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${Imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:20.111271" elapsed="0.107554"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:20.219361" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:20.219034" elapsed="0.053173"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:20.272563" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<arg>${PROGRAMACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:20.272379" elapsed="0.024743"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:19.940745" elapsed="0.356644"/>
+</kw>
+<kw name="E clique no botão criar card">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T18:18:20.298471" level="INFO">Clicking element 'id:form-botao'.</msg>
+<arg>${CAMPO_CARD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T18:18:20.298272" elapsed="0.046571"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:20.297952" elapsed="0.047117"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-12T18:18:19.940561" elapsed="0.404555"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>3</value>
+<status status="PASS" start="2025-04-12T18:18:19.505536" elapsed="0.839673"/>
+</for>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-12T18:18:30.346367" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-12T18:18:20.345560" elapsed="10.001429"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:19.504680" elapsed="10.842686"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-12T18:18:30.349947" elapsed="2.075627"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:30.348879" elapsed="2.077064"/>
+</kw>
+<status status="PASS" start="2025-04-12T18:18:16.079973" elapsed="16.346639"/>
+</test>
+<status status="PASS" start="2025-04-12T18:18:09.731552" elapsed="22.698075"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Preenchimento Incorreto" id="s1" pass="0" fail="1" skip="0">Preenchimento Incorreto</stat>
+<stat name="Preenchimento Correto Teste" id="s1" pass="2" fail="0" skip="0">Preenchimento Correto Teste</stat>
 </suite>
 </statistics>
 <errors>
